@@ -1,3 +1,6 @@
+# Data Files
+Iris.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
