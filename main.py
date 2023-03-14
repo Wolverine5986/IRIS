@@ -1,6 +1,8 @@
 from flask import Flask,request,render_template,request,redirect
 from app.utils import Prediction
+import app.CONFIG as path
 app = Flask(__name__)
+
 
 
 @app.route('/')
@@ -15,4 +17,4 @@ def index():
     return render_template('index.html',iris_type = predicted_output)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host=path.HOST_NAME,port=path.PORT_NUMBER)

@@ -1,6 +1,7 @@
 import pickle
 import json
 import os
+import app.CONFIG as path
 
 
 class Prediction():
@@ -11,11 +12,11 @@ class Prediction():
     def load_raw(self):
         # print(os.getcwd())
         # print(os.listdir())
-        os.chdir('artifacts')
+        # os.chdir('artifacts')
         # print(os.getcwd())
-        with open(r'Logistic_Model.pkl','rb')as file:
+        with open(path.MODEL_PATH,'rb')as file:
              self.model = pickle.load(file)
-        with open(r'Specis.json','r') as file:
+        with open(path.ASSET_PATH,'r') as file:
               self.output = json.load(file)
         # print(self.output)      
     
